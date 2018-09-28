@@ -15,10 +15,10 @@ public class TextLab002v100 {
 		System.out.println(10000123%3600000/60000); //remainder in minutes
 		
 		System.out.print("Seconds: ");
-		System.out.println(10000123%3600000%600000/10000);
+		System.out.println(10000123%3600000%60000/1000);
 
 		System.out.print("Milliseconds:");
-		System.out.println(10000123%3600000%600000%10000);
+		System.out.println(10000123%3600000%60000%1000);
 	}
 
 }
