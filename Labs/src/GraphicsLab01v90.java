@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.applet.*;
 
-public class GraphicsLab01v80 extends Applet{
+public class GraphicsLab01v90 extends Applet{
 	public void paint(Graphics g){
 		//DRAW CUBE
 		g.setColor(Color.blue);
@@ -13,7 +13,12 @@ public class GraphicsLab01v80 extends Applet{
 		g.drawLine(350, 350, 450, 450);
 
 		//DRAW SPHERE
-
+		g.drawOval(500, 50, 300, 300);
+		g.drawOval(500, 150, 300, 100);
+		g.drawOval(500, 100, 300, 200);
+		g.drawOval(600, 50, 100, 300);
+		g.drawOval(550, 50, 200, 300);
+		
 		//DRAW TRAINGLE
 		
 		
