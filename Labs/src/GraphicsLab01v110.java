@@ -23,13 +23,28 @@ public class GraphicsLab01v110 extends Applet{
 		g.drawOval(138, 100, 225, 300);
 		
 		//DRAW TRAINGLE
-		g.setColor(Color.green);
+		g.setColor(Color.darkGray);
 		g.drawLine(400, 600, 400, 900);
 		g.drawLine(100, 900, 700, 900);
 		g.drawLine(100, 900, 400, 600);
 		g.drawLine(400, 600, 700, 900);
 		g.drawLine(250, 750, 700, 900);
 		g.drawLine(550, 750, 100, 900);
+		
+		//DRAW PRISM
+		g.setColor(Color.magenta);
+		g.drawLine(500, 450, 650, 150);
+		g.drawLine(650, 150, 800, 450);
+		g.drawLine(800, 450, 500, 450);
+		g.drawLine(650, 400, 800, 100);
+		g.drawLine(800, 100, 950, 400);
+		g.drawLine(950, 400, 650, 400);
+		g.drawLine(500, 450, 650, 400);
+		g.drawLine(650, 150, 800, 100);
+		g.drawLine(800, 450, 950, 400);
+			
+		
+		
 		
 		
 	}
