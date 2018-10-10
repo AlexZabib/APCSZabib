@@ -27,7 +27,6 @@ public class LoopingChallenge {
 			System.out.println(e);
 			f = e + g;
 			System.out.println(f);
-			
 		}
 	}
 
