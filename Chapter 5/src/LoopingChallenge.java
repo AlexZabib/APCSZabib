@@ -19,6 +19,7 @@ public class LoopingChallenge {
 		int e = 0;
 		int f = 1;
 		int g = 0;
+		System.out.println("f");
 		for(int i = 1; i<=7; i++)
 		{
 			g = f + e;
