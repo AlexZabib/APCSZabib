@@ -8,7 +8,7 @@ public class ArrayPractice {
 	int list[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 	System.out.println(addAll(list));
 	System.out.println(checkNum(list));
-	System.out.println(findIndex(list));
+	//System.out.println(findIndex(list));
 	
 	
 	
