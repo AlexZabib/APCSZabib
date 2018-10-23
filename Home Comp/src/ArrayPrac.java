@@ -2,9 +2,11 @@
 public class ArrayPrac {
 
 	public static void main(String[] args) {
-		int list[]; //declares the array list identifier or name of array
-		list = new int[10]; //declares how long the list of the array is
+		 //declares the array list identifier or name of array
+		 //declares how long the list of the array is
 		// can combine lines 5 and 6 to be int list[] = new int[10];
+		int list[];
+		list = new int[10];
 		
 		for(int i = 0; i<=9; i++) {
 			list[i] = i + 100;
