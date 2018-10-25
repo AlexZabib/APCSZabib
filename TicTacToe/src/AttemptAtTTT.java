@@ -32,24 +32,41 @@ public class AttemptAtTTT
 	public static char playX() 
 	{
 		Scanner input = new Scanner(System.in);
-		System.out.println("Pic x Location");
+		System.out.println("Pick x Location");
 		int x = input.nextInt();
-		System.out.println("Pic y Location");
+		System.out.println("Pick y Location");
 		int y = input.nextInt();
 		
-		
-		return board[x][y] = 'X';
-		
-		
+		if(board[x][y] == 'Y' || board[x][y] == 'X')
+		{
+			System.out.println("Invalid Move Pick Again");
+			playX();
+			
+		}
+		else {
+			return board[x][y] = 'X';
+		}
+		return board[x][y] = board[x][y];
+			
 	}
 	public static char playY()
 	{
 		Scanner input = new Scanner(System.in);
-		System.out.println("Pic x Location");
+		System.out.println("Pick x Location");
 		int x = input.nextInt();
-		System.out.println("Pic y Location");
+		System.out.println("Pick y Location");
 		int y = input.nextInt();
-		return board[x][y] = 'Y';
+
+		if(board[x][y] == 'Y' || board[x][y] == 'X')
+		{
+			System.out.println("Invalid Move Pick Again");
+			playY();
+			
+		}
+		else {
+			return board[x][y] = 'Y';
+		}
+		return board[x][y] = board[x][y];
 	}
 	public static void cycle()
 	{
