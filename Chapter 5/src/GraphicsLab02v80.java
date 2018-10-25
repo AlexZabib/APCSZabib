@@ -10,7 +10,7 @@ public class GraphicsLab02v80 extends Applet{
 		g.drawRect(10,10,width,height);
 		
 		// Draw bottom-left corner
-		for(int i=0; i<=50; i=++){
+		for(int i=0; i<=50; i++){
 			g.drawLine(10+(i*2),640,990, 640-i);
 		}
 		
