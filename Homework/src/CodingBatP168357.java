@@ -3,35 +3,51 @@ public class CodingBatP168357 {
 
 	public static void main(String[] args) 
 	{
-		System.out.println(checkSeven(1, 7, 7, 0, 0, 0));	
-		System.out.println(checkSeven(1, 7, 1, 7, 0, 0));
-		System.out.println(checkSeven(1, 7, 1, 1, 7, 0));
-	}
+		int[] a1 = {1, 7, 7};
+		int[] a2 = {1, 7, 1, 7};
+		int[] a3 = {1, 7, 1, 1, 7};
 	
-	public static boolean checkSeven(int num, int num1, int num2, int num3, int num4, int num5)
-	{
-		int[] array1 = {num, num1, num2, num3, num4, num5};
-		boolean sevenSeven = false;
-		for(int i = 1; i<=array1.length; i++)
-		{
-			if(array1[i] == 7 && array1[i-1] == 7 )
-			{
-				sevenSeven = true;
-				return sevenSeven;
-			}
-			/*else if(array1[i] == 7 && array1[i-2] == 7)
-			{	
-				sevenSeven = true;
-				return sevenSeven;
-			}*/
-			else
-			{
-				sevenSeven = false;
-				return sevenSeven;
-			}
-		}
-		return sevenSeven;
-		
+		checkSeven(a1);
+		checkSeven(a2);
+		checkSeven(a3);
 	}
-
+	public static void checkSeven(int[] a)
+	{
+		boolean seven = false;
+		for(int i = 1; i<a.length; i++)
+		{
+			while(i>0)
+			{
+				if(a[i] == 7 && a[i-1] == 7)
+				{
+					seven = true;
+					break;
+				}	
+				else
+				{
+					seven = false;
+					break;
+				}	
+			}
+			while(i>1)
+			{
+				if(a[i] ==7 && a[i-2] == 7)
+				{
+					seven = true;
+					break;
+				}
+				else if(a[i] == 7 && a[i-1] == 7)
+				{
+					seven = true;
+					break;
+				}
+				else
+				{
+					seven = false;
+					break;
+				}
+			}		
+		}
+		System.out.println(seven);
+	}
 }
