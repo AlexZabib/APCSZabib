@@ -3,7 +3,7 @@ package PumpkinProject;
 public class MainPumpkin {
 
 	private double weight;
-	private double pricePerPound;
+	private double pricePerPound = .25;
 	
 	public MainPumpkin(double pounds)
 	{
@@ -20,8 +20,8 @@ public class MainPumpkin {
 	}
 	public double getPPP()
 	{
-		pricePerPound = weight * .25;
-		return pricePerPound;
+		double price = weight * pricePerPound;
+		return price;
 	}
 	public void grow()
 	{
