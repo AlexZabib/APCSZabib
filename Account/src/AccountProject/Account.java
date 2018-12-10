@@ -1,7 +1,7 @@
 package AccountProject;
 
 public class Account {
-	double balance;
+	protected double balance;
 	
 	public Account(double bal)
 	{
@@ -15,8 +15,21 @@ public class Account {
 	{
 		balance = balance + amt;
 	}
-	public void withdraw(double amt)
+	public boolean withdraw(double amt)
 	{
+		boolean take;
 		balance = balance - amt;
+		if(balance < 0)
+		{
+			balance = balance + amt;
+			return take = false;
+		}
+		else 
+		{
+			balance = balance;
+			return take = true;	
+		}
 	}
+	
+
 }
