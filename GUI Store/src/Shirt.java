@@ -1,12 +1,13 @@
 public class Shirt {
 	private char Size;
 	private String Style;
-	private int Price;
+	private double Price;
 	private String Color;
 	private int Amount;
 	private int id;
+	private String Name;
 	
-	public Shirt(char si, String sty, int p, String c, int Amt, int id)
+	public Shirt(char si, String sty, double p, String c, int Amt, int id, String Name)
 	{
 		Size = si;
 		Style = sty;
@@ -14,6 +15,7 @@ public class Shirt {
 		Color = c;
 		Amount = Amt;
 		this.id = id;
+		this.Name = Name;
 	}
 	
 	public char getSize()
@@ -24,7 +26,7 @@ public class Shirt {
 	{
 		return Style;
 	}
-	public int getPrice()
+	public double getPrice()
 	{
 		return Price;
 	}
@@ -36,7 +38,10 @@ public class Shirt {
 	{
 		return Amount;
 	}
-	public int getId() {
+	public int getID() {
 		return id;
+	}
+	public String getName() {
+		return Name;
 	}
 }

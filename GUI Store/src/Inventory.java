@@ -12,12 +12,42 @@ public class Inventory {
 		products.add(s);
 	}
 	
-	public void removeItem(int i) {
-		products.remove(i);
+	public void removeItem(Shirt s) {
+		products.remove(s);
 	}
 	
-/*	public int findIndexByName(String itemname)
+	public int findIndexByID(int ID)
 	{
-		
+		for(int i = 0; i<=products.size(); i++)
+		{
+			if( (products.get(i).getID()) == ID)
+				return i;
+		}
+		return -1;
+	}
+	
+	public int findIndexByName(String Name)
+	{
+		for(int i = 0; i<=products.size(); i++)
+		{
+			if( (products.get(i).getName()).equals(Name))
+				return i;
+		}
+		return -1;
+	}
+	
+	public int getID(int index)
+	{
+		return products.get(index).getID();
+	}
+	
+	public String getName(int index)
+	{
+		return products.get(index).getName();
+	}
+	
+	/*public int qtySet(int ID, int a)
+	{
+		products.get(ID).getAmount() = a;
 	}*/
 }
