@@ -1,5 +1,5 @@
 public class Shirt {
-	private char Size;
+	private String Size;
 	private String Style;
 	private double Price;
 	private String Color;
@@ -7,7 +7,7 @@ public class Shirt {
 	private int id;
 	private String Name;
 	
-	public Shirt(char si, String sty, double p, String c, int Amt, int id, String Name)
+	public Shirt(String si, String sty, double p, String c, int Amt, int id, String Name)
 	{
 		Size = si;
 		Style = sty;
@@ -18,7 +18,7 @@ public class Shirt {
 		this.Name = Name;
 	}
 	
-	public char getSize()
+	public String getSize()
 	{
 		return Size;
 	}
