@@ -27,25 +27,34 @@ public class Inventory {
 		return -1;
 	}
 	
-	public int findIndexByName(String Name)
-	{
-		for(int i = 0; i<=products.size(); i++)
-		{
-			if( (products.get(i).getName()).equals(Name))
-				return i;
-		}
-		return -1;
-	}
+	//-------------------------------------------------
 	
+	public String getSize(int index)
+	{
+		return products.get(index).getSize();
+	}
+	public String getStyle(int index)
+	{
+		return products.get(index).getStyle();
+	}
+	public double getPrice(int index)
+	{
+		return products.get(index).getPrice();
+	}
+	public String getColor(int index)
+	{
+		return products.get(index).getColor();
+	}
 	public int getID(int index)
 	{
 		return products.get(index).getID();
 	}
-	
-	public String getName(int index)
+	public int getAmount(int index)
 	{
-		return products.get(index).getName();
+		return products.get(index).getAmount();
 	}
+	
+	//------------------------------------------------
 	
 	public void writeData()
 	{
@@ -53,7 +62,7 @@ public class Inventory {
 			FileWriter fr = new FileWriter("out.txt");
 			//-----Each line will have ArrayList data
 			for(Shirt it : products) {
-				fr.write(it.getSize() + " " + it.getStyle() + " " + it.getPrice() + " " + it.getColor() + " " + it.getAmount() + " " + it.getID() + " " + it.getName() + " " + "\n");	
+				fr.write(it.getSize() + " " + it.getStyle() + " " + it.getPrice() + " " + it.getColor() + " " + it.getAmount() + " " + it.getID() + " " + " " + "\n");	
 			}
 			fr.close();
 			
@@ -82,9 +91,8 @@ public class Inventory {
 			String color = parts[3];
 			int amount = Integer.parseInt(parts[4]);
 			int id = Integer.parseInt(parts[5]);
-			String name = parts[6];
 			
-			Shirt s1 = new Shirt(size, style, price, color, amount, id, name);
+			Shirt s1 = new Shirt(size, style, color, price, amount, id);
 			products.add(s1);
 			
 			}

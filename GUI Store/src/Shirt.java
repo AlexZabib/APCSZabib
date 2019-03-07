@@ -5,9 +5,9 @@ public class Shirt {
 	private String Color;
 	private int Amount;
 	private int id;
-	private String Name;
 	
-	public Shirt(String si, String sty, double p, String c, int Amt, int id, String Name)
+	
+	public Shirt(String si, String sty,  String c, double p, int Amt, int id)
 	{
 		Size = si;
 		Style = sty;
@@ -15,7 +15,7 @@ public class Shirt {
 		Color = c;
 		Amount = Amt;
 		this.id = id;
-		this.Name = Name;
+		
 	}
 	
 	public String getSize()
@@ -41,7 +41,5 @@ public class Shirt {
 	public int getID() {
 		return id;
 	}
-	public String getName() {
-		return Name;
-	}
+	
 }

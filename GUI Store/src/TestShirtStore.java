@@ -28,7 +28,6 @@ public class TestShirtStore {
 		
 		stock.readFile();
 		
-		System.out.println(stock.getName(0));
 		
 		stock.writeData();
 
