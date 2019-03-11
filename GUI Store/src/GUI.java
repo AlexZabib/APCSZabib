@@ -25,7 +25,7 @@ public class GUI implements ActionListener {
 	JLabel Price = new JLabel("Price: ");
 	JLabel Amount = new JLabel("Amount: ");
 	JLabel ID = new JLabel("ID: ");
-	JLabel test = new JLabel("Test: ");
+	JLabel test = new JLabel("Order Status: ");
 	
 	
 	JButton search = new JButton("Search ID");
@@ -141,7 +141,7 @@ public class GUI implements ActionListener {
 		{
 			Shirt s = new Shirt(si, sty, c, p, a, i);
 			i1.addItem(s);
-			test.setText("Test: " + si +" "+ sty +" "+ c +" "+ p +" "+ a +" "+ i);
+			test.setText("Order Status: " + "\n" + "Order " + i + " Added to Cart");
 			Size.setText("Size: ");
 			Style.setText("Style: ");
 			Color.setText("Color: ");
@@ -159,11 +159,12 @@ public class GUI implements ActionListener {
 			Price.setText("Price: ");
 			Amount.setText("Amount: ");
 			ID.setText("ID: ");
+			test.setText("Order Status: " + "\n" + "Order " + i + " Removed from Cart");
 		}
-		if(inp.equals("Search"))
+		if(inp.equals("Search ID"))
 		{
 			try {
-				int index = i1.findIndexByID(i);
+				int index = i1.findIndexByID(Integer.parseInt(input.getText()));
 				si = i1.getSize(index);
 				sty = i1.getStyle(index);
 				c = i1.getColor(index);
@@ -180,12 +181,12 @@ public class GUI implements ActionListener {
 			}
 			catch(Exception x)
 			{
-				test.setText("This order isn't in your cart");
+				test.setText("This Order isn't in Your Cart");
 			}
 		}
 		if(inp.equals("Clear"))
 		{
-			test.setText("Test: ");
+			test.setText("Order Status: ");
 			Size.setText("Size: ");
 			Style.setText("Style: ");
 			Color.setText("Color: ");
