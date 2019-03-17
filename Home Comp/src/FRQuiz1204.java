@@ -3,7 +3,7 @@ public class FRQuiz1204
 {
 	public static void main(String args[])
 	{
-		long fibo[] = new long[100]; //prints 100 numbers in the sequence
+		long fibo[] = new long[15]; //prints 100 numbers in the sequence
 		fibo[0] = 0; //declares first number in sequence
 		fibo[1] = 1; //declares second number in sequence
 		System.out.println(fibo[0] + "\n" + fibo[1]); //print first two numbers of sequence
