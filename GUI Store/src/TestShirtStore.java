@@ -5,13 +5,14 @@ public class TestShirtStore {
 	{
 		Inventory stock = new Inventory();
 		
+		
 		//------------Starting Inventory-------------
 
-		Shirt s1 = new Shirt('S', "Long Sleeve", 60.00, "Blue", 100, 1001, "S Blue Long Sleeve");
+		/*Shirt s1 = new Shirt("S", "Long Sleeve", 60.00, "Blue", 100, 1001, "S Blue Long Sleeve");
 		stock.addItem(s1);
-		Shirt s2 = new Shirt('M', "Long Sleeve", 60.00, "Blue", 100, 1002, "M Blue Long Sleeve");
+		Shirt s2 = new Shirt("M", "Long Sleeve", 60.00, "Blue", 100, 1002, "M Blue Long Sleeve");
 		stock.addItem(s2);
-		Shirt s3 = new Shirt('L', "Long Sleeve", 60.00, "Blue", 100, 1003, "L Blue Long Sleeve");
+		Shirt s3 = new Shirt("L", "Long Sleeve", 60.00, "Blue", 100, 1003, "L Blue Long Sleeve");
 		stock.addItem(s3);
 		
 		
@@ -23,8 +24,12 @@ public class TestShirtStore {
 		System.out.println("Name is: " + stock.getName(1) +"\n");
 		
 		System.out.println("ID is: " + stock.getID(2));
-		System.out.println("Name is: " + stock.getName(2) +"\n");
+		System.out.println("Name is: " + stock.getName(2) +"\n");*/
 		
+		stock.readFile();
+		
+		
+		stock.writeData();
 
 
 	}
